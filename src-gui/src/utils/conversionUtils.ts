@@ -12,7 +12,7 @@ export function piconerosToBeldex(piconeros: number): number {
 
 export function isBeldexAddressValid(address: string, testnet: boolean) {
   const re = testnet
-    ? "[9AL][1-9A-HJ-NP-Za-km-z]{94,105}"
+    ? "[9ALB][1-9A-HJ-NP-Za-km-z]{94,105}"
     : "b[1-9A-HJ-NP-Za-km-z]{96,106}";
   return new RegExp(`(?:^${re}$)`).test(address);
 }
